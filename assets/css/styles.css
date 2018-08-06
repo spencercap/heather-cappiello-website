@@ -444,6 +444,7 @@ body {
   width: 100%;
   max-width: 600px;
   padding: 1em;
+  color: #888888;
 }
 
 .agencySite, .agencyAddress {
@@ -456,6 +457,8 @@ body {
 
 .leftContent, .rightContent {
   padding: 1em;
+  color: initial;
+  text-decoration: none;
 }
 
 .leftContent {
@@ -489,30 +492,41 @@ body {
 }
 
 .newsLinksContainer {
-  width: 60%;
+  width: 100%;
+  padding: 20px 40px;
   /* font-size: 1.75rem; */
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
+  flex-direction: row;
   justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-wrap: wrap;
 }
 
 .news-link {
   color: #000;
   text-decoration: none;
-  padding: 1em 0;
+  /* padding: 1em 1em; */
+  width: 250px;
+  height: 280px;
+  /* background: grey; */
+  margin: 20px;
+
+  transform: translateY(40px);
+  opacity: 0;
+  
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15), 0 6px 10px rgba(0,0,0,0.12);
+
+  animation: lift-in 700ms forwards;
+  border-radius: 8px;
+  overflow: hidden;
+
+  transition-duration: 300ms;
+}
+
+.news-link:hover {
+  box-shadow: 0 6px 26px rgba(0,0,0,0.25), 0 7px 24px rgba(0,0,0,0.22);
 }
 
 .news-link:hover > .news-name {
@@ -520,13 +534,50 @@ body {
 }
 
 .news-name {
-  padding: 1em 0;
+  position: absolute;
+  width: 100%;
+  padding: 0.5em 1em;
   font-size: 1.5rem;
 }
 
-.news-icon {
-  height: 10rem;
+.news-info {
+  width: 100%;
 }
+
+.news-type {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: #6d6d6d;
+  color: #fff;
+  border-radius: 12px;
+  padding: 0.1em 0.75em;
+  margin: 0.5em 1em;
+  line-height: 17px;
+  font-size: 12px;
+}
+
+.news-date {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 0.1em 0.5em;
+  margin: 0.5em 1em;
+
+  font-size: 12px;
+  color: #888888;
+}
+
+.news-icon {
+  height: 196px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.newsLinksContainer .news-link:nth-child(1) { animation-delay: 250ms }
+.newsLinksContainer .news-link:nth-child(2) { animation-delay: 500ms }
+.newsLinksContainer .news-link:nth-child(3) { animation-delay: 750ms }
+.newsLinksContainer .news-link:nth-child(4) { animation-delay: 1000ms }
 
 .videoContainer > iframe {
   position: absolute;
@@ -607,5 +658,16 @@ body {
     width:  calc( 100vw - 28px );
     height: -webkit-calc( 100vw - 28px );
     height: calc( 100vw - 28px );
+  }
+}
+
+@keyframes lift-in {
+  0% {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
   }
 }
