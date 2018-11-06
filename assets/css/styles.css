@@ -361,7 +361,9 @@ body {
 
 }
 
-
+#break_glassImg {
+    background-image: url('../img/break_glass.jpg'), url('../img/play-icon.svg');
+}
 #reelImg {
   background-image: url('../img/reel.jpg'), url('../img/play-icon.svg');
 }
@@ -513,7 +515,8 @@ body {
   color: #000;
   text-decoration: none;
   width: 100%;
-  height: 80px;
+  min-width: 300px;
+  /* height: 80px; */
   margin: 20px;
 
   transform: translateY(40px);
@@ -565,6 +568,7 @@ body {
 }
 
 .news-type {
+    display: none;
   position: absolute;
   bottom: 0;
   /* left: 0; */
@@ -578,6 +582,7 @@ body {
 }
 
 .news-date {
+    display: none;
   position: absolute;
   bottom: 0;
   right: 0;
@@ -589,7 +594,7 @@ body {
 }
 
 .news-icon {
-    height: 100%;
+    height: 80px;
     width: 80px;
     object-fit: cover;
     float: left;
