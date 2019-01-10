@@ -355,8 +355,8 @@ body {
 }
 
 .videoSectionTitle {
-    color: #6d6d6d;
-    font-size: 2rem;
+    color: #adadad;
+    font-size: 2.5rem;
     line-height: 1.25em;
     -webkit-flex-basis: 100%;
     -ms-flex-preferred-size: 100%;
@@ -517,16 +517,11 @@ body {
     width: 100%;
     max-width: 600px;
     padding: 1em;
-    color: #888888;
+    color: #6d6d6d;
 }
 
-.agencySite,
 .agencyAddress {
     color: #adadad;
-}
-
-.agencySite:hover {
-    text-decoration: underline overline;
 }
 
 .leftContent,
@@ -534,14 +529,61 @@ body {
     padding: 1em;
     color: initial;
     text-decoration: none;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.rightContent > a {
+    text-decoration: none;
+    /* margin: 2em; */
 }
 
 .leftContent {
     text-align: right;
 }
 
+.agency {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 300px;
+    text-decoration: none;
+    margin: 1em;
+}
+
+.agency > .type {
+    color: #adadad;
+    font-size: 2.5rem;
+    line-height: 1.25em;
+    text-align: center;
+    padding: 1em 0;
+}
+
+.agency > a {
+    text-decoration: none;
+    text-align: left;
+}
+
+.agencyContact {
+    color: #6d6d6d;
+    text-decoration: none;
+}
+
+.agencyContact > a {
+    color: #6d6d6d;
+    text-decoration: underline;
+}
+
+.agencyContact > a:hover {
+    text-decoration: underline overline;
+}
+
 .agencyName {
     color: #000000;
+    /* margin-top: 2em; */
 }
 
 .agencyNumber {
@@ -569,9 +611,15 @@ body {
     text-decoration: none;
 }
 
+.managers {
+    font-weight: bold;
+    margin-bottom: 0.5em;
+}
+
 .agencyImg {
     width: 260px;
     margin-top: 1em;
+    /* margin: 1em 0 2em; */
 }
 
 .newsLinksContainer {
@@ -602,6 +650,7 @@ body {
     text-decoration: none;
     width: 100%;
     min-width: 320px;
+    max-width: 600px;
     /* height: 80px; */
     margin: 20px;
 
@@ -634,10 +683,7 @@ body {
 }
 
 .news-link:hover {
-    -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15),
-        0 6px 10px rgba(0, 0, 0, 0.12);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15), 0 6px 10px rgba(0, 0, 0, 0.12);
-    /* box-shadow: 0 6px 26px rgba(0,0,0,0.25), 0 7px 24px rgba(0,0,0,0.22); */
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.15), 0 4px 6px rgba(0, 0, 0, 0.12);
 }
 
 .news-link:hover > .news-name {
@@ -655,7 +701,7 @@ body {
 .news-name {
     position: absolute;
     bottom: 0;
-    left: 0;
+    right: 0;
     padding: 0.5em 0.5em;
     padding-left: -webkit-calc(80px + 1em);
     padding-left: calc(80px + 1em);
