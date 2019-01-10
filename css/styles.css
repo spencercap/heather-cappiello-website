@@ -409,7 +409,11 @@ body {
     border: #4d4d4d solid 1px !important;
 }
 
-.videosContainer > a:hover {
+.videosContainer > a:hover .videoTitle > .show {
+    text-decoration: overline underline;
+}
+
+.videosContainer.otherVideos > a:hover {
     text-decoration: overline underline;
 }
 
@@ -464,7 +468,15 @@ body {
 }
 
 .videoTitle {
-    font-size: 2rem;
+    font-size: 1.8rem;
+}
+
+.videoTitle > .show {
+    font-size: 1.8rem;
+}
+
+.videoTitle > .episode {
+    font-size: 1.4rem;
 }
 
 .videoImg {
