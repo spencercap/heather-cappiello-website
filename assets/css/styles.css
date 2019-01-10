@@ -389,6 +389,9 @@ body {
 #blue_bloods_808Img {
   background-image: url('../img/blue_bloods_808.jpg'), url('../img/play-icon.svg');
 }
+#blue_bloods_909Img {
+    background-image: url('../img/blue_bloods_909.jpg'), url('../img/play-icon.svg');
+  }
 #corporateImg {
   background-image: url('../img/corporate.jpg'), url('../img/play-icon.svg');
 }
