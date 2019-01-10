@@ -18,7 +18,7 @@
     <meta name="msapplication-config" content="/assets/favicon/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
 
-    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="stylesheet" type="text/css" href="./css/styles.css" />
 </head>
 
 <body>
@@ -31,7 +31,7 @@
             <div class="role">DIRECTOR</div>
             <div class="nav">
                 <a href="#about" class="about">ABOUT</a>
-                <a href="#reel" class="work activeSection">WORK</a>
+                <a href="#reel" class="work activeSection">TV & FILM</a>
                 <a href="#news" class="news">NEWS</a>
                 <a href="#contact" class="contact">CONTACT</a>
                 <div class="mobile-divider"></div>
@@ -45,7 +45,7 @@
             <div class="role">DIRECTOR</div>
             <div class="nav">
                 <a href="#about" class="about">ABOUT</a>
-                <a href="#reel" class="work activeSection">WORK</a>
+                <a href="#reel" class="work activeSection">TV & FILM</a>
                 <a href="#news" class="news">NEWS</a>
                 <a href="#contact" class="contact">CONTACT</a>
             </div>
@@ -56,17 +56,16 @@
                 <iframe src="https://player.vimeo.com/video/299017250" width="640" height="360" frameborder="0"
                     webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
             </div>
-            <div class="allVideosContainer">
+
+            <div class="videosContainer">
                 <div class="divider"></div>
-                <a href="#break_glass" data-vimeo="https://player.vimeo.com/video/299017250">
-                    <div class="videoImg" id="break_glassImg"></div>
-                    <span class="videoTitle">BREAK GLASS</span>
-                </a>
+                <div class="videoSectionTitle">TV EPISODES</div>
+
                 <a href="#madam_secretary" data-vimeo="https://player.vimeo.com/video/160286799">
                     <div class="videoImg" id="madam_secretaryImg"></div>
                     <span class="videoTitle">Madam Secretary</span>
                 </a>
-                <a href="#blue_bloods_909" data-vimeo="https://player.vimeo.com/video/307144364#t=17s">
+                <a href="#blue_bloods_909" data-vimeo="https://player.vimeo.com/video/307144364">
                     <div class="videoImg" id="blue_bloods_909Img"></div>
                     <span class="videoTitle">Handcuffs - Ep909</span>
                 </a>
@@ -90,14 +89,30 @@
                     <div class="videoImg" id="saving_graceImg"></div>
                     <span class="videoTitle">Saving Grace</span>
                 </a>
-                <a href="#rubys_tuesday" data-vimeo="https://player.vimeo.com/video/36778294">
-                    <div class="videoImg" id="rubys_tuesdayImg"></div>
-                    <span class="videoTitle">Ruby's Tuesday</span>
-                </a>
                 <a href="#corporate" data-vimeo="https://player.vimeo.com/video/59971877">
                     <div class="videoImg" id="corporateImg"></div>
                     <span class="videoTitle">Corporate</span>
                 </a>
+            </div>
+
+            <div class="videosContainer">
+                <div class="divider"></div>
+                <div class="videoSectionTitle">FILM</div>
+
+                <a href="#break_glass" data-vimeo="https://player.vimeo.com/video/299017250">
+                    <div class="videoImg" id="break_glassImg"></div>
+                    <span class="videoTitle">BREAK GLASS</span>
+                </a>
+                <a href="#rubys_tuesday" data-vimeo="https://player.vimeo.com/video/36778294">
+                    <div class="videoImg" id="rubys_tuesdayImg"></div>
+                    <span class="videoTitle">Ruby's Tuesday</span>
+                </a>
+            </div>
+
+            <div class="videosContainer">
+                <div class="divider"></div>
+                <div class="videoSectionTitle">REEL</div>
+
                 <a href="#reel" data-vimeo="https://player.vimeo.com/video/200393630">
                     <div class="videoImg" id="reelImg"></div>
                     <span class="videoTitle">Director's Reel</span>
@@ -258,10 +273,10 @@
 
     </div>
 
-    <script>
+    <script type="text/javascript">
         (function () {
             var mainVideo = document.querySelector('.mainVideoContainer iframe');
-            var videoLinks = document.querySelectorAll('.allVideosContainer a');
+            var videoLinks = document.querySelectorAll('.videosContainer a'); // gets from each videosContainer, currently 3
             var mainInfo = document.querySelector('.mainInfo');
             var moreInfo = document.querySelector('.moreInfo');
             var mobileButton = document.querySelector('.mobileButton');
@@ -362,12 +377,10 @@
             if (window.location.hash !== '') {
                 checkHash();
             } else if (window.location.hash === '') {
-                window.location.hash = 'break_glass'; // defaults to about as "home"
+                window.location.hash = 'reel'; // defaults to about as "home"
             } // what video did they arrive on?
 
         })(); // on DOM ready function
-
-
     </script>
 
 </body>
