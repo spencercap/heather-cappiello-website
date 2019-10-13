@@ -66,70 +66,14 @@ body {
 .centralContainer {
     margin: 0 auto;
     width: 100%;
-    /* width: 98%; */
-    max-width: 1400px;
-    padding: 0 1em;
-    height: 100vh;
-}
-
-.col-lg-1,
-.col-lg-10,
-.col-lg-11,
-.col-lg-12,
-.col-lg-2,
-.col-lg-3,
-.col-lg-4,
-.col-lg-5,
-.col-lg-6,
-.col-lg-7,
-.col-lg-8,
-.col-lg-9,
-.col-md-1,
-.col-md-10,
-.col-md-11,
-.col-md-12,
-.col-md-2,
-.col-md-3,
-.col-md-4,
-.col-md-5,
-.col-md-6,
-.col-md-7,
-.col-md-8,
-.col-md-9,
-.col-sm-1,
-.col-sm-10,
-.col-sm-11,
-.col-sm-12,
-.col-sm-2,
-.col-sm-3,
-.col-sm-4,
-.col-sm-5,
-.col-sm-6,
-.col-sm-7,
-.col-sm-8,
-.col-sm-9,
-.col-xs-1,
-.col-xs-10,
-.col-xs-11,
-.col-xs-12,
-.col-xs-2,
-.col-xs-3,
-.col-xs-4,
-.col-xs-5,
-.col-xs-6,
-.col-xs-7,
-.col-xs-8,
-.col-xs-9 {
-    position: relative;
-    min-height: 1px;
-    padding: 15px;
+    height: calc(100vh - 58px);
 }
 
 .desktop {
     display: block;
 }
 
-.desktop.header {
+/* .desktop.header {
     position: fixed;
     top: 50%;
     width: 300px;
@@ -139,7 +83,7 @@ body {
     -ms-transform: translateY(-50%);
 
     transform: translateY(-50%);
-}
+} */
 
 .desktop > .name {
     font-size: 3rem;
@@ -155,9 +99,12 @@ body {
     text-align: right;
 }
 
-.desktop > .nav {
+.desktop.nav {
+    /* padding: 0 2rem; */
+}
+
+/* .desktop > .nav {
     border-top: 1px solid #4d4d4d;
-    font-size: 2rem;
     text-align: center;
     padding: 0.5rem;
     display: -webkit-box;
@@ -169,12 +116,13 @@ body {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
-}
+} */
 
-.desktop > .nav a {
-    padding: 0.5rem;
+.desktop.nav a {
+    padding: 0.5rem 1rem;
     cursor: pointer;
     text-decoration: none;
+    font-size: 1.75rem;
     color: #333;
 }
 
@@ -190,15 +138,31 @@ body {
     font-size: 2.25rem;
     /*line-height: 60px;*/
     font-weight: 300;
+    /* padding-left: 1rem; */
 }
 
-.menuOpen {
-    display: block !important;
+.navButtons {
+    display: flex;
 }
 
 .moreInfo {
     text-align: center;
-    display: none;
+    /* display: none; */
+    display: block;
+    height: 0;
+    opacity: 0;
+    transition-duration: 200ms;
+    transition-timing-function: ease-out;
+}
+
+
+.menuOpen {
+    /* display: block !important; */
+    display: block;
+    /* height: fit-content; */
+    /* height: auto; */
+    opacity: 1;
+    height: 191px;
 }
 
 .moreInfo > .role {
@@ -206,7 +170,7 @@ body {
     font-size: 2rem;
     line-height: 1.25em;
     text-align: left;
-    padding: 0 15px;
+    padding: 0 2.5rem 1rem;
 }
 
 .moreInfo > .nav {
@@ -230,9 +194,10 @@ body {
 }
 
 .moreInfo > .nav a {
-    padding: 0.5rem;
+    padding: 0.5rem 1rem;
     cursor: pointer;
     text-decoration: none;
+    font-size: 1.75rem;
     color: #333;
 }
 
@@ -242,7 +207,7 @@ body {
 
 .mainInfo {
     width: 100%;
-    padding: 25px 15px 0;
+    padding: 2.5rem 2.5rem 0;
     /*height: 60px;*/
     display: -webkit-box;
     display: -webkit-flex;
@@ -255,27 +220,31 @@ body {
     cursor: pointer;
 }
 
-.mobile {
+/* .mobile {
     display: none;
-}
+} */
 
 .mobileButton {
+    display: none;
     background-image: url("../assets/img/menu-icon.svg");
     -webkit-background-size: contain;
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
     width: 32px;
+    height: 32px;
 }
 
 .section {
-    width: -webkit-calc(100% - 340px);
-    width: calc(100% - 340px); /* - amount of left nav size + margin left */
+    /* - amount of left nav size + margin left */
+    /* width: -webkit-calc(100% - 340px);
+    width: calc(100% - 340px);  */
+    width: 100%; 
     position: relative;
-    left: 300px;
+    /* left: 300px; */
     /* height: 100%; */
     min-height: 100%;
-    margin-left: 40px;
+    /* margin-left: 40px; */
     background: #fff;
     padding: 0 1em;
 
@@ -334,15 +303,28 @@ body {
     /*padding: 3rem; */
     width: 100%;
     position: relative;
-    padding-bottom: 56.25%; /* 16:9 */
+    padding-bottom: 54.5%;
     padding-top: 25px;
     height: 0;
-    margin: 2em 0;
+    /* margin: 2em 0; */
     background: #000;
     -webkit-transition-duration: 500ms;
     -o-transition-duration: 500ms;
     transition-duration: 500ms;
-    border: 1px solid transparent;
+    border: none;
+    /* border: 1px solid transparent; */
+}
+
+.mainVideoContainer2 {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.mainVideoContainer3 {
+    width: 100%;
+    background: #000;
+    margin: 2em 0;
 }
 
 .divider {
@@ -422,6 +404,10 @@ body {
     background-size: cover, 20%;
 }
 
+#reframeImg {
+    background-image: url("../assets/img/reframe.jpg"),
+        url("../assets/img/play-icon.svg");
+}
 #break_glassImg {
     background-image: url("../assets/img/break_glass.jpg"),
         url("../assets/img/play-icon.svg");
@@ -542,7 +528,7 @@ body {
 
 .leftContent,
 .rightContent {
-    padding: 1em;
+    padding: 1em 1.5em;
     color: initial;
     text-decoration: none;
 
@@ -591,18 +577,26 @@ body {
     -webkit-align-items: flex-start;
         -ms-flex-align: start;
             align-items: flex-start;
-    max-width: 300px;
+    max-width: 320px;
     text-decoration: none;
     margin: 1em;
 }
 
-.agency > .type {
+.representation-text {
     color: #adadad;
     font-size: 2.5rem;
     line-height: 1.25em;
     text-align: center;
     padding: 1em 0;
 }
+
+/* .agency > .type {
+    color: #adadad;
+    font-size: 2.5rem;
+    line-height: 1.25em;
+    text-align: center;
+    padding: 1em 0;
+} */
 
 .agency > a {
     text-decoration: none;
@@ -647,6 +641,7 @@ body {
     -webkit-justify-content: center;
     -ms-flex-pack: center;
     justify-content: center;
+    align-items: start;
 }
 
 .agentContainer > a {
@@ -726,8 +721,9 @@ body {
 }
 
 .news-link:hover {
-    -webkit-box-shadow: 0 2px 20px rgba(0, 0, 0, 0.15), 0 4px 6px rgba(0, 0, 0, 0.12);
-            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.15), 0 4px 6px rgba(0, 0, 0, 0.12);
+    border-style: dashed;
+    /* -webkit-box-shadow: 0 2px 20px rgba(0, 0, 0, 0.15), 0 4px 6px rgba(0, 0, 0, 0.12);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.15), 0 4px 6px rgba(0, 0, 0, 0.12); */
 }
 
 .news-link:hover > .news-name {
@@ -906,7 +902,11 @@ body {
         display: none;
         visibility: hidden;
     }
-    .mobile {
+    /* .mobile {
+        display: block;
+        visibility: visible;
+    } */
+    .mobileButton {
         display: block;
         visibility: visible;
     }

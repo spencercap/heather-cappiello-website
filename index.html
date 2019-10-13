@@ -22,10 +22,19 @@
 </head>
 
 <body>
-    <div class="mobile header">
+    <div class="header">
         <div class="mainInfo">
             <div class="name">HEATHER CAPPIELLO</div>
-            <div class="mobileButton"></div>
+            
+            <div class="navButtons">
+                <div class="desktop nav">
+                    <a href="#about" class="about">ABOUT</a>
+                    <a href="#reel" class="work activeSection">TV & FILM</a>
+                    <a href="#news" class="news">NEWS</a>
+                    <a href="#contact" class="contact">CONTACT</a>
+                </div>
+                <div class="mobileButton"></div>
+            </div>
         </div>
         <div class="moreInfo">
             <div class="role">DIRECTOR</div>
@@ -40,23 +49,17 @@
     </div>
 
     <div class="centralContainer">
-        <div class="desktop header">
-            <div class="name">HEATHER CAPPIELLO</div>
-            <div class="role">DIRECTOR</div>
-            <div class="nav">
-                <a href="#about" class="about">ABOUT</a>
-                <a href="#reel" class="work activeSection">TV & FILM</a>
-                <a href="#news" class="news">NEWS</a>
-                <a href="#contact" class="contact">CONTACT</a>
-            </div>
-        </div>
 
         <div class="section videoSection">
-            <div class="mainVideoContainer">
-                <iframe src="https://player.vimeo.com/video/200393630" width="640" height="360" frameborder="0"
-                    webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+            <div class="mainVideoContainer3">
+                <div class="mainVideoContainer2">
+                    <div class="mainVideoContainer">
+                        <iframe src="https://player.vimeo.com/video/200393630" width="640" height="360" frameborder="0"
+                            webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                    </div>
+                </div>
             </div>
-
+            
             <div class="videosContainer otherVideos">
                 <div class="divider"></div>
                 <div class="videoSectionTitle">REEL</div>
@@ -140,6 +143,10 @@
                 <div class="divider"></div>
                 <div class="videoSectionTitle">FILM</div>
 
+                <a href="#reframe" data-vimeo="https://player.vimeo.com/video/365897573">
+                    <div class="videoImg" id="reframeImg"></div>
+                    <span class="videoTitle">REFRAME</span>
+                </a>
                 <a href="#break_glass" data-vimeo="https://player.vimeo.com/video/299017250">
                     <div class="videoImg" id="break_glassImg"></div>
                     <span class="videoTitle">BREAK GLASS</span>
@@ -183,7 +190,6 @@
         </div>
 
         <div class="section newsSection">
-
             <div class="newsLinksContainer">
 
                 <a class="news-link" target="_blank" href="http://zipcreative.net/fast-forward-friday-with-heather-cappiello/">
@@ -279,52 +285,14 @@
                 </a>
 
             </div>
-
         </div>
 
         <div class="section contactSection">
+            <div class="representation-text">REPRESENTATION</div>
             <div class="agentContainer">
 
                 <div class="leftContent">
-                    <!-- <div class="agency">
-
-                        <div class="type">AGENT</div>
-
-                        <div class="managers">
-                            <div>Neda Niroumand</div>
-                        </div>
-
-                        <a target="_blank" href="https://www.buchwald.com/">
-                            <div class="agencyName">Buchwald Talent Agency</div>
-                        </a>
-
-                        <div class="agencyContact">
-                            <a class="agencySite" target="_blank" href="https://www.buchwald.com/">buchwald.com</a>
-                            <span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
-                            <a href="tel:1-323-655-7400">323-655-7400</a>
-                        </div>
-
-                        <a target="_blank" href="https://www.buchwald.com/">
-                            <div class="agencyAddress">5900 Wilshire Blvd. 31st Floor<br>Los Angeles, CA 90036</div>
-                        </a>
-                        <a target="_blank" href="https://www.buchwald.com/">
-                            <img class="agencyImg" src="./assets/img/buchwald_logo.png" alt=""/>
-                        </a>
-                    </div> -->
-
-                    <div class="agency">
-                        <div class="type">REPRESENTATION</div>
-
-                        <div class="managers">
-                            <div>
-                                Paul Alan Smith
-                                <br>
-                                Tyler Reynolds
-                                <br>
-                                Néda Niroumand
-                            </div>
-                        </div>
-
+                    <div class="agency">                    
                         <a target="_blank" href="http://equitablemgmt.com/">
                             <div class="agencyName">Equitable MGMT</div>
                         </a>
@@ -339,47 +307,31 @@
                             <div class="agencyAddress">6363 Wilshire Blvd. Suite 650<br>Los Angeles, CA 90048</div>
                         </a>
                         <a target="_blank" href="http://equitablemgmt.com/">
-                            <img class="agencyImg" src="./assets/img/EQUITABLE-MGMT-Logo.png" alt=""/>
+                            <img class="agencyImg" src="./assets/img/EQUITABLE-MGMT-Logo.png" alt="equitable mgmt logo"/>
                         </a>
                     </div>
                 </div>
 
-                <!-- <div class="rightContent">
-
+                <div class="rightContent">
                     <div class="agency">
-                        <div class="type">Representation</div>
-
-                        <div class="managers">
-                            <div>Paul Alan Smith + Tyler Reynolds</div>
-                        </div>
-
-                        <a target="_blank" href="http://esartists.com/">
-                            <div class="agencyName">Equitable Stewardship for Artists</div>
+                        <a target="_blank" href="http://www.innovativeartists.com/home.html">
+                            <div class="agencyName">Innovative Artists</div>
                         </a>
 
                         <div class="agencyContact">
-                            <a class="agencySite" target="_blank" href="http://esartists.com/">esartists.com</a>
+                            <a class="agencySite" target="_blank" href="http://www.innovativeartists.com/home.html">innovativeartists.com</a>
                             <span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
-                            <a href="tel:1-310-853-4200">310-853-4200</a>
+                            <a href="tel:1-310-656-5133">310-656-5133</a>
                         </div>
 
-                        <a target="_blank" href="http://esartists.com/">
-                            <div class="agencyAddress">6363 Wilshire Blvd. Suite 650<br>Los Angeles, CA 90048</div>
+                        <a target="_blank" href="http://www.innovativeartists.com/home.html">
+                            <div class="agencyAddress">1505 10th Street<br>Santa Monica, CA 90401</div>
                         </a>
-                        <a target="_blank" href="http://esartists.com/">
-                            <img class="agencyImg" src="./assets/img/ESA_logo.jpg" alt=""/>
+                        <a target="_blank" href="http://www.innovativeartists.com/home.html">
+                            <img class="agencyImg" src="./assets/img/ia_logo.jpg" alt="innovative artists logo"/>
                         </a>
                     </div>
-
-                </div> -->
-
-
-                    <!-- <a target="_blank" href="https://www.buchwald.com/">
-                        <div class="agencyName">Buchwald</div>
-                        <div class="agencyAddress">5900 Wilshire Blvd. 31st Floor<br>Los Angeles, CA 90036</div>
-                        <img class="agencyImg" src="./assets/img/buckwald_logo.png" alt="" />
-                    </a> -->
-
+                </div>
             </div>
         </div>
 
@@ -403,11 +355,6 @@
             var contactSection = document.querySelector('.contactSection');
             var newsSection = document.querySelector('.newsSection');
 
-
-
-            // console.log(navItems); // .classList.contains('first')
-
-
             mainInfo.addEventListener('click', function (menu) {
                 menuOpen = !menuOpen;
                 if (menuOpen) {
@@ -423,7 +370,7 @@
             [].forEach.call(videoLinks, function (el) {
                 el.addEventListener("click", function () {
                     mainVideo.src = this.dataset.vimeo;
-                    window.scrollTo(0, 0);
+                    window.scrollTo({ top: 1, behavior: 'smooth' })
                 }); // group event listener
             }); // array looper
 
@@ -443,7 +390,7 @@
                     if (('#' + el.href.split('#')[1]) === window.location.hash) {
                         mainVideo.src = el.dataset.vimeo;
                         el.classList.add('playing');
-                        window.scrollTo(0, 0);
+                        window.scrollTo({ top: 1, behavior: 'smooth' })
                     }
                 }); // array looper
 
