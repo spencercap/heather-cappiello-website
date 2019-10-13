@@ -66,6 +66,7 @@ body {
 .centralContainer {
     margin: 0 auto;
     width: 100%;
+    height: -webkit-calc(100vh - 58px);
     height: calc(100vh - 58px);
 }
 
@@ -142,6 +143,9 @@ body {
 }
 
 .navButtons {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
 }
 
@@ -151,8 +155,12 @@ body {
     display: block;
     height: 0;
     opacity: 0;
-    transition-duration: 200ms;
-    transition-timing-function: ease-out;
+    -webkit-transition-duration: 200ms;
+         -o-transition-duration: 200ms;
+            transition-duration: 200ms;
+    -webkit-transition-timing-function: ease-out;
+         -o-transition-timing-function: ease-out;
+            transition-timing-function: ease-out;
 }
 
 
@@ -227,7 +235,6 @@ body {
 .mobileButton {
     display: none;
     background-image: url("../assets/img/menu-icon.svg");
-    -webkit-background-size: contain;
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -400,7 +407,6 @@ body {
 }
 
 .videosContainer > a:hover > div {
-    -webkit-background-size: cover, 20%;
     background-size: cover, 20%;
 }
 
@@ -472,7 +478,6 @@ body {
 .videoImg {
     width: 100%;
     height: 177.75px;
-    -webkit-background-size: cover, 10%;
     background-size: cover, 10%;
     background-position: center;
     background-repeat: no-repeat;
@@ -492,7 +497,6 @@ body {
 
 .open {
     background-image: url("../assets/img/menu-icon.svg");
-    -webkit-background-size: 60px 60px;
     background-size: 60px;
     background-position: right, center;
     background-repeat: no-repeat;
@@ -510,7 +514,6 @@ body {
     background-image: url("../assets/img/heather_cappiello.jpg");
     background-repeat: no-repeat;
     background-position: center;
-    -webkit-background-size: cover;
     background-size: cover;
 }
 
@@ -641,7 +644,10 @@ body {
     -webkit-justify-content: center;
     -ms-flex-pack: center;
     justify-content: center;
-    align-items: start;
+    -webkit-box-align: start;
+    -webkit-align-items: start;
+        -ms-flex-align: start;
+            align-items: start;
 }
 
 .agentContainer > a {
