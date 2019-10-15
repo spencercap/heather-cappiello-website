@@ -674,6 +674,7 @@ body {
     max-width: 600px;
     /* height: 80px; */
     margin: 20px;
+    cursor: alias;
 
     -webkit-transform: translateY(40px);
 
@@ -704,7 +705,9 @@ body {
 }
 
 .news-link:hover {
-    border-style: dashed;
+    /* border-style: dashed; */
+    border-left-style: dashed;
+    border-right-style: dashed;
     /* -webkit-box-shadow: 0 2px 20px rgba(0, 0, 0, 0.15), 0 4px 6px rgba(0, 0, 0, 0.12);
             box-shadow: 0 2px 20px rgba(0, 0, 0, 0.15), 0 4px 6px rgba(0, 0, 0, 0.12); */
 }
