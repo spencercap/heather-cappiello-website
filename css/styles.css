@@ -510,6 +510,11 @@ body {
     animation: lift-in 700ms forwards;
 }
 
+.fade-in-anim {
+    -webkit-animation: fade-in 500ms forwards;
+    animation: fade-in 500ms forwards;
+}
+
 .agencyAddress {
     color: #adadad;
 }
@@ -940,6 +945,24 @@ body {
     100% {
         -webkit-transform: translateY(0px);
         transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
         opacity: 1;
     }
 }
