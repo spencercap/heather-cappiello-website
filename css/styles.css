@@ -13,6 +13,7 @@ html {
     webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
     font-family: sans-serif;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -88,7 +89,7 @@ body {
 
 .desktop > .name {
     font-size: 3rem;
-    font-weight: 300;
+    font-weight: 400;
     text-align: right;
     line-height: 1.25em;
 }
@@ -99,25 +100,6 @@ body {
     line-height: 1.25em;
     text-align: right;
 }
-
-.desktop.nav {
-    /* padding: 0 2rem; */
-}
-
-/* .desktop > .nav {
-    border-top: 1px solid #4d4d4d;
-    text-align: center;
-    padding: 0.5rem;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-} */
 
 .desktop.nav a {
     padding: 0.5rem 1rem;
@@ -137,9 +119,7 @@ body {
 
 .mainInfo > .name {
     font-size: 2.25rem;
-    /*line-height: 60px;*/
-    font-weight: 300;
-    /* padding-left: 1rem; */
+    font-weight: 400;
 }
 
 .navButtons {
@@ -151,7 +131,6 @@ body {
 
 .moreInfo {
     text-align: center;
-    /* display: none; */
     display: block;
     height: 0;
     opacity: 0;
@@ -163,12 +142,8 @@ body {
             transition-timing-function: ease-out;
 }
 
-
 .menuOpen {
-    /* display: block !important; */
     display: block;
-    /* height: fit-content; */
-    /* height: auto; */
     opacity: 1;
     height: 191px;
 }
@@ -509,7 +484,7 @@ body {
     /*padding-bottom: 60%;*/
     -webkit-border-radius: 100%;
     border-radius: 100%;
-    margin: 1em 0;
+    margin: 2em 0 1em;
 
     background-image: url("../assets/img/heather_cappiello.jpg");
     background-repeat: no-repeat;
@@ -522,7 +497,17 @@ body {
     width: 100%;
     max-width: 600px;
     padding: 1em;
+    padding-bottom: 3em;
     color: #6d6d6d;
+}
+
+.start-opacity-0 {
+    opacity: 0;
+}
+
+.lift-in-anim {
+    -webkit-animation: lift-in 700ms forwards;
+    animation: lift-in 700ms forwards;
 }
 
 .agencyAddress {
@@ -551,15 +536,6 @@ body {
     -webkit-justify-content: center;
         -ms-flex-pack: center;
             justify-content: center;
-}
-
-.rightContent > a {
-    text-decoration: none;
-    /* margin: 2em; */
-}
-
-.leftContent {
-    text-align: right;
 }
 
 .agency {
@@ -609,6 +585,7 @@ body {
 .agencyContact {
     color: #6d6d6d;
     text-decoration: none;
+    white-space: nowrap
 }
 
 .agencyContact > a {
@@ -849,6 +826,21 @@ body {
     animation-delay: 900ms;
 }
 
+.delay-anim-100 {
+    -webkit-animation-delay: 100ms;
+    animation-delay: 100ms;
+}
+
+.delay-anim-200 {
+    -webkit-animation-delay: 200ms;
+    animation-delay: 200ms;
+}
+
+.delay-anim-300 {
+    -webkit-animation-delay: 300ms;
+    animation-delay: 300ms;
+}
+
 .videoContainer > iframe {
     position: absolute;
     top: 0;
@@ -900,29 +892,17 @@ body {
     width: auto;
 }
 
-@media screen and (max-width: 1028px) {
-    .centralContainer {
-        padding: 0;
-    }
+@media screen and (max-width: 768px) {
     .desktop {
         display: none;
         visibility: hidden;
     }
-    /* .mobile {
-        display: block;
-        visibility: visible;
-    } */
     .mobileButton {
         display: block;
         visibility: visible;
     }
-    .section {
-        width: 100%;
-        left: 0;
-        margin-left: 0;
-        background: #fff;
-        min-height: -webkit-calc(100vh - 47px);
-        min-height: calc(100vh - 47px);
+    .news-title {
+        font-size: 1.35rem;
     }
 }
 
@@ -932,12 +912,6 @@ body {
         width: calc(100vw - 28px);
         height: -webkit-calc(100vw - 28px);
         height: calc(100vw - 28px);
-    }
-}
-
-@media screen and (max-width: 550px) {
-    .news-title {
-        font-size: 1.35rem;
     }
 }
 

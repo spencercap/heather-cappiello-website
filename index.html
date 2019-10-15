@@ -165,32 +165,28 @@
         </div>
 
         <div class="section aboutSection">
-            <div class="profilePic"></div>
-            <div class="bio">
-                Heather has directed episodes of <a class="link" href="#madam_secretary"><i>Madam Secretary</i></a>, <a
-                class="link" href="#criminal_minds"><i>Criminal Minds</i></a>, <a class="link" href="#blue_bloods_912"><i>Blue Bloods</i></a> (2016 Voice Award winner) and the Hulu Original horror series, <a class="link" href="#freakish"><i>Freakish</i></a>. Additionally, she directed the pilot presentation for the one-hour drama
-                <a class="link" href="#corporate"><i>Corporate</i></a> produced by The Collective. Heather wrote and
-                directed the short film <a class="link" href="#rubys_tuesday"><i>Ruby’s Tuesday</i></a> that screened
-                at more than twenty-five festivals including The Short Film Corner at Cannes. Notably, Heather was one
-                of two directors chosen for the 2015 CBS Directing Initiative and was a protege in the inaugural DGA Craft and Mentorship Program. A life-long admirer of dance as an art form, Heather recently directed two site-specific dance performances and the short dance film, <a class="link" href="#break_glass"><i>BREAK GLASS</i></a>.
+            <div class="profilePic lift-in-anim"></div>
+            <div class="bio start-opacity-0 lift-in-anim delay-anim-100">
+                Heather has directed episodes of <i><a class="link" href="#madam_secretary">Madam Secretary</a><span style="text-decoration:underline;">,</span></i> <i><a class="link" href="#criminal_minds">Criminal Minds</a><span style="text-decoration:underline;">,</span></i> the Hulu Original horror series <i><a class="link" href="#freakish">Freakish</a></i> and recently finished directing her fifth episode of the CBS drama <i><a class="link" href="#blue_bloods">Blue Bloods</a></i> (<a class="link" target="_blank" href="https://www.youtube.com/watch?v=5ZwLwJADezo&feature=youtu.be&list=PLBXgZMI_zqfQ_dO9c_j3Z0Hj58RN1rPa3">2016 Voice Award winner</a>). Additionally, she directed the pilot presentation for the one-hour drama <i><a class="link" href="#corporate">Corporate</a></i> produced by The Collective. Heather wrote and directed the award-winning short film <i><a class="link" href="#rubys_tuesday">Ruby's Tuesday</a></i> that screened at more than twenty-five festivals including The Short Film Corner at Cannes. Notably, Heather was one of two directors chosen for the 2015 CBS Directing Initiative and was a protege in the inaugural DGA Craft and Mentorship Program. A life-long admirer of dance as an art form, Heather recently directed two site-specific dance performances and the short dance films, <i><a class="link" href="#break_glass">BREAK GLASS</a></i> and <i><a class="link" href="#reframe">REFRAME</a></i>.
                 <br><br>
-                Heather is also an accomplished theater director who has helmed theatrical premieres in London, San
-                Francisco and Berkeley, including tenures with the acclaimed Shotgun Players and the Bay Area’s Jawbone
-                Theatre Ensemble which she co-founded.
+                Heather is an accomplished theater director who has helmed theatrical premieres in London, San Francisco and Berkeley, including tenures with the acclaimed Shotgun Players and the Bay Area's Jawbone Theatre Ensemble which she co-founded. Heather was the script supervisor on more than fifteen original single-camera dramas and comedies, including TNT's critically acclaimed drama <i>Saving Grace </i>starring Academy Award winner Holly Hunter. Heather's debut directing episode of <i><a class="link" href="#saving_grace">Saving Grace</a></i> was chosen as the submission piece for both Ms. Hunter's SAG and Golden Globe award nominations.
                 <br><br>
-                Heather was the script supervisor on more than fifteen original single-camera dramas and comedies,
-                including HBO’s award-winning series <i>Six Feet Under</i>, <i>Carnivàle</i> and <i>Enlightened</i> and
-                TNT’s critically acclaimed drama Saving Grace starring
-                Academy Award winner Holly Hunter. Heather’s debut directing episode of <a class="link" href="#saving_grace"><i>Saving
-                Grace</i></a> was chosen as the submission piece for both Ms. Hunter’s SAG and Golden Globe
-                award nominations.
+                Heather is an active member of The Directors Guild of America (DGA) and serves as the appointed Co-Coordinator of the Activities & Events Standing Committee for the Women's Steering Committee.
                 <br><br>
-                Heather is an active member of The Directors Guild of America (DGA) and serves as the appointed
-                Co-Coordinator of the Activities & Events Standing Committee for the Women’s Steering Committee.
-                <div class="link-section"><a class="link" target="_blank" href="http://www.imdb.com/name/nm0135529/">IMDb
-                Profile</a>&nbsp;&#x279a;</div>
-                <div class="link-section"><a class="link" target="_blank" href="http://podbay.fm/show/1123467805/e/1500966000?autostart=1">Listen
-                to Podcast Interview with Heather Cappiello – The Other 50%</a>&nbsp;&#x279a;</div>
+
+                <div class="link-section start-opacity-0 lift-in-anim delay-anim-200">
+                    <a class="link" target="_blank" href="http://www.imdb.com/name/nm0135529/">
+                        IMDb Profile
+                    </a>
+                    &nbsp;&#x279a;
+                </div>
+                
+                <div class="link-section start-opacity-0 lift-in-anim delay-anim-300">
+                    <a class="link" target="_blank" href="http://theotherfiftypercent.com/blog/2017/7/25/episode-55-heather-cappiello-director">
+                        Listen to Podcast Interview with Heather Cappiello – The Other 50%
+                    </a>
+                    &nbsp;&#x279a;
+                </div>
             </div>
         </div>
 
@@ -361,13 +357,16 @@
             var newsSection = document.querySelector('.newsSection');
 
             mainInfo.addEventListener('click', function (menu) {
-                menuOpen = !menuOpen;
-                if (menuOpen) {
-                    moreInfo.classList.add('menuOpen');
-                    mobileButton.style.backgroundImage = 'url("assets/img/close-icon.svg")';
-                } else {
-                    moreInfo.classList.remove('menuOpen');
-                    mobileButton.style.backgroundImage = 'url("assets/img/menu-icon.svg")';
+                if ( window.matchMedia('(max-width: 768px)').matches ) {
+                    // click within the small media query
+                    menuOpen = !menuOpen;
+                    if (menuOpen) {
+                        moreInfo.classList.add('menuOpen');
+                        mobileButton.style.backgroundImage = 'url("assets/img/close-icon.svg")';
+                    } else {
+                        moreInfo.classList.remove('menuOpen');
+                        mobileButton.style.backgroundImage = 'url("assets/img/menu-icon.svg")';
+                    }
                 }
             });
 
