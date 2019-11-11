@@ -433,6 +433,10 @@ body {
     background-image: url("../assets/img/blue_bloods_912.jpg"),
         url("../assets/img/play-icon.svg");
 }
+#blue_bloods_1006Img {
+    background-image: url("../assets/img/blue_bloods_1006.jpg"),
+        url("../assets/img/play-icon.svg");
+}
 #corporateImg {
     background-image: url("../assets/img/corporate.jpg"),
         url("../assets/img/play-icon.svg");
