@@ -36,7 +36,19 @@ body {
 
 .link:hover {
     text-decoration: overline underline;
-    /*font-weight: 600;*/
+}
+
+.bio a {
+    color: rgb(91, 119, 211);
+    font-style: italic;
+    text-decoration: none;
+    padding-right: 1px;
+}
+.bio a:hover {
+    text-decoration: overline underline;
+}
+.bio i {
+    padding-right: 1px;
 }
 
 .link-section {
