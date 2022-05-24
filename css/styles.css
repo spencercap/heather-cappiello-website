@@ -790,9 +790,10 @@ body {
 .news-icon {
 	height: 80px;
 	width: 80px;
-	-o-object-fit: cover;
-	object-fit: cover;
+	-o-object-fit: contain;
+	object-fit: contain;
 	float: left;
+	background:rgb(246, 246, 246);
 }
 
 .newsLinksContainer .news-link:nth-child(1) {
@@ -834,6 +835,30 @@ body {
 .newsLinksContainer .news-link:nth-child(10) {
 	-webkit-animation-delay: 900ms;
 	animation-delay: 900ms;
+}
+.newsLinksContainer .news-link:nth-child(11) {
+	-webkit-animation-delay: 1000ms;
+	animation-delay: 1000ms;
+}
+.newsLinksContainer .news-link:nth-child(12) {
+	-webkit-animation-delay: 1100ms;
+	animation-delay: 1100ms;
+}
+.newsLinksContainer .news-link:nth-child(13) {
+	-webkit-animation-delay: 1200ms;
+	animation-delay: 1200ms;
+}
+.newsLinksContainer .news-link:nth-child(14) {
+	-webkit-animation-delay: 1300ms;
+	animation-delay: 1300ms;
+}
+.newsLinksContainer .news-link:nth-child(15) {
+	-webkit-animation-delay: 1400ms;
+	animation-delay: 1400ms;
+}
+.newsLinksContainer .news-link:nth-child(16) {
+	-webkit-animation-delay: 1500ms;
+	animation-delay: 1500ms;
 }
 
 .delay-anim-100 {
