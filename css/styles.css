@@ -876,6 +876,16 @@ body {
 	animation-delay: 300ms;
 }
 
+.delay-anim-400 {
+	-webkit-animation-delay: 400ms;
+	animation-delay: 400ms;
+}
+
+.delay-anim-500 {
+	-webkit-animation-delay: 500ms;
+	animation-delay: 500ms;
+}
+
 .videoContainer > iframe {
 	position: absolute;
 	top: 0;
