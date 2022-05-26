@@ -439,6 +439,25 @@ body {
 #corporateImg {
 	background-image: url('../assets/img/corporate.jpg'), url('../assets/img/play-icon.svg');
 }
+#fbi_most_wantedImg {
+	background-image: url('../assets/img/fbi_most_wanted_s3.jpg');
+}
+#ftwd_s7Img {
+	background-image: url('../assets/img/ftwd_s7.jpg');
+	background-position: left bottom;
+}
+#fbi_s4Img {
+	background-image: url('../assets/img/fbi_s4.jpg');
+}
+#chicago_fire_s10Img {
+	background-image: url('../assets/img/chicago_fire_s10.jpg');
+}
+#fear_world_beyond_s2Img {
+	background-image: url('../assets/img/fear_world_beyond_s2.jpg');
+}
+#law_and_order_s21Img {
+	background-image: url('../assets/img/law_and_order_s21.jpeg');
+}
 
 .videoTitle {
 	font-size: 1.8rem;
