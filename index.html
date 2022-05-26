@@ -79,42 +79,42 @@
                 <div class="divider"></div>
                 <div class="videoSectionTitle">TV EPISODES</div>
 
-                <a href="#">
+                <a href="javascript:void(0)">
                     <div class="videoImg" id="fbi_most_wantedImg"></div>
                     <div class="videoTitle">
                         <div class="show">FBI: Most Wanted</div>
                         <div class="episode">&nbsp;</div>
                     </div>
                 </a>
-                <a href="#">
+                <a href="javascript:void(0)">
                     <div class="videoImg" id="ftwd_s7Img"></div>
                     <div class="videoTitle">
                         <div class="show">FEAR the Walking Dead</div>
                         <div class="episode">&nbsp;</div>
                     </div>
                 </a>
-                <a href="#">
+                <a href="javascript:void(0)">
                     <div class="videoImg" id="fbi_s4Img"></div>
                     <div class="videoTitle">
                         <div class="show">FBI</div>
                         <div class="episode">&nbsp;</div>
                     </div>
                 </a>
-                <a href="#">
+                <a href="javascript:void(0)">
                     <div class="videoImg" id="chicago_fire_s10Img"></div>
                     <div class="videoTitle">
                         <div class="show">Chicago Fire</div>
                         <div class="episode">&nbsp;</div>
                     </div>
                 </a>
-                <a href="#">
+                <a href="javascript:void(0)">
                     <div class="videoImg" id="fear_world_beyond_s2Img"></div>
                     <div class="videoTitle">
                         <div class="show">The Walking Dead: World Beyond</div>
                         <div class="episode">&nbsp;</div>
                     </div>
                 </a>
-                <a href="#">
+                <a href="javascript:void(0)">
                     <div class="videoImg" id="law_and_order_s21Img"></div>
                     <div class="videoTitle">
                         <div class="show">Law &amp; Order</div>
@@ -480,10 +480,12 @@
 
 
             [].forEach.call(videoLinks, function (el) {
-                el.addEventListener("click", function () {
-                    mainVideo.src = this.dataset.vimeo;
-                    window.scrollTo({ top: 1, behavior: 'smooth' })
-                }); // group event listener
+                if (el.getAttribute('data-vimeo')) {
+                    el.addEventListener("click", function () {
+                        mainVideo.src = this.dataset.vimeo;
+                        window.scrollTo({ top: 1, behavior: 'smooth' })
+                    }); // grouped event listener
+                }
             }); // array looper
 
 
@@ -497,6 +499,8 @@
             }, false);
 
             function checkHash() {
+                // console.log('checkHash');
+
                 [].forEach.call(videoLinks, function (el) {
                     el.classList.remove('playing');
                     if (('#' + el.href.split('#')[1]) === window.location.hash) {
