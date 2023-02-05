@@ -10,8 +10,9 @@
 html {
 	font-size: 10px;
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-	webkit-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
 	-ms-text-size-adjust: 100%;
+	text-size-adjust: 100%;
 	font-family: sans-serif;
 	scroll-behavior: smooth;
 }
@@ -403,8 +404,12 @@ body {
 #break_glassImg {
 	background-image: url('../assets/img/break_glass.jpg'), url('../assets/img/play-icon.svg');
 }
-#reelImg {
-	background-image: url('../assets/img/reel.jpg'), url('../assets/img/play-icon.svg');
+#reel2015Img {
+	background-image: url('../assets/img/reel_2015.jpg'), url('../assets/img/play-icon.svg');
+}
+#reel2023Img {
+	/* background-image: url('../assets/img/reel_2023.jpg'), url('../assets/img/play-icon.svg'); */
+	background-image: url('../assets/img/reel_2023.jpg');
 }
 #rubys_tuesdayImg {
 	background-image: url('../assets/img/rubys_tuesday.jpg'), url('../assets/img/play-icon.svg');

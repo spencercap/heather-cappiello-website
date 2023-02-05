@@ -34,7 +34,7 @@
             <div class="navButtons">
                 <div class="desktop nav">
                     <a href="#about" class="about">ABOUT</a>
-                    <a href="#reel" class="work activeSection">TV &amp; FILM</a>
+                    <a href="#work" class="work activeSection">TV &amp; FILM</a>
                     <a href="#news" class="news">NEWS</a>
                     <a href="#contact" class="contact">CONTACT</a>
                 </div>
@@ -45,7 +45,7 @@
             <div class="role">DIRECTOR</div>
             <div class="nav">
                 <a href="#about" class="about">ABOUT</a>
-                <a href="#reel" class="work activeSection">TV &amp; FILM</a>
+                <a href="#work" class="work activeSection">TV &amp; FILM</a>
                 <a href="#news" class="news">NEWS</a>
                 <a href="#contact" class="contact">CONTACT</a>
                 <div class="mobile-divider"></div>
@@ -203,11 +203,15 @@
 
             <div class="videosContainer otherVideos">
                 <div class="divider"></div>
-                <div class="videoSectionTitle">REEL</div>
+                <div class="videoSectionTitle">REELS</div>
 
-                <a href="#reel" data-vimeo="https://player.vimeo.com/video/200393630">
-                    <div class="videoImg" id="reelImg"></div>
-                    <span class="videoTitle">Director's Reel</span>
+                <a href="#reel_2015" data-vimeo="https://player.vimeo.com/video/200393630">
+                    <div class="videoImg" id="reel2015Img"></div>
+                    <span class="videoTitle">Director's Reel (2015)</span>
+                </a>
+                <a href="javascript:void(0)">
+                    <div class="videoImg" id="reel2023Img"></div>
+                    <span class="videoTitle">Director's Reel (2023)</span>
                 </a>
             </div>
 
@@ -221,7 +225,15 @@
                 <i>Chicago Fire</i>, <i>FBI</i>, the reboot of <i>Law &#38; Order</i> and the season finale of <i>FBI:
                     Most Wanted</i>.
                 <br><br>
-                Heather is an alumnus of the DGA Craft and Mentorship Program and was selected to participate in the CBS
+
+                Heather is an alumnus of the DGA Craft and Mentorship Program and was selected to participate in the CBS Directing
+                Initiative. She wrote and directed the award-winning short film <i>Ruby&rsquo;s Tuesday</i> that screened at more than twenty-five
+                festivals including the inaugural Short Film Corner at Cannes. Prior to directing television, Heather was the script
+                supervisor on dozens of original single-camera dramas and comedies, including HBO&rsquo;s <i>Six Feet Under</i>, <i>Carniv&agrave;le</i> and TNT&rsquo;s
+                critically acclaimed drama <i>Saving Grace</i> starring Academy Award winner Holly Hunter.
+                <br><br>
+
+                <!-- Heather is an alumnus of the DGA Craft and Mentorship Program and was selected to participate in the CBS
                 Directing Initiative. She wrote and directed the award-winning short film
                 <i>Ruby&rsquo;s Tuesday</i> that screened at more than twenty-five festivals including the inaugural
                 Short Film Corner at Cannes. Prior to directing television,
@@ -238,7 +250,7 @@
                 Heather received her BA from UC Berkeley and her MA in Theatre Directing from London's Mountview Academy
                 of Theatre Arts. Heather is an active member
                 of The Directors Guild of America (DGA) and the DGA Women's Steering Committee.
-                <br><br>
+                <br><br> -->
 
                 <div class="link-section start-opacity-0 lift-in-anim delay-anim-200">
                     <a class="link" target="_blank" href="https://www.instagram.com/heathercappiello/">
@@ -484,6 +496,7 @@
             var aboutSection = document.querySelector('.aboutSection');
             var contactSection = document.querySelector('.contactSection');
             var newsSection = document.querySelector('.newsSection');
+            var videoPlayerContainer = document.querySelector('.mainVideoContainer3');
 
             mainInfo.addEventListener('click', function (menu) {
                 if (window.matchMedia('(max-width: 768px)').matches) {
@@ -522,6 +535,14 @@
             function checkHash() {
                 // console.log('checkHash');
 
+                // hide/show player if #work grid view
+                if (window.location.hash == '#work') {
+                    videoPlayerContainer.classList.add('hidden');
+                } else {
+                    videoPlayerContainer.classList.remove('hidden');
+                }
+
+                // updates vimeo player + currently playing indicator in grid view
                 [].forEach.call(videoLinks, function (el) {
                     el.classList.remove('playing');
                     if (('#' + el.href.split('#')[1]) === window.location.hash) {
@@ -575,7 +596,7 @@
                 checkHash();
                 setTimeout(checkHash, 300); // stupid re-reload for ensuring you get to the desired video in URL hash
             } else if (window.location.hash === '') {
-                window.location.hash = 'reel'; // defaults to about as "home"
+                window.location.hash = '#work'; // defaults to about as "home"
             } // what video did they arrive on?
 
         })(); // on DOM ready function
