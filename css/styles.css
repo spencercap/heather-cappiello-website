@@ -407,9 +407,8 @@ body {
 #reel2015Img {
 	background-image: url('../assets/img/reel_2015.jpg'), url('../assets/img/play-icon.svg');
 }
-#reel2023Img {
-	/* background-image: url('../assets/img/reel_2023.jpg'), url('../assets/img/play-icon.svg'); */
-	background-image: url('../assets/img/reel_2023.jpg');
+#reel2024Img {
+	background-image: url('../assets/img/reel_2024.jpg'), url('../assets/img/play-icon.svg');
 }
 #rubys_tuesdayImg {
 	background-image: url('../assets/img/rubys_tuesday.jpg'), url('../assets/img/play-icon.svg');
