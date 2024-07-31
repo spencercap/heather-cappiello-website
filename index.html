@@ -34,7 +34,7 @@
             <div class="navButtons">
                 <div class="desktop nav">
                     <a href="#about" class="about">ABOUT</a>
-                    <a href="#work" class="work activeSection">TV &amp; FILM</a>
+                    <a href="#reel_2024" class="work activeSection">TV &amp; FILM</a>
                     <a href="#news" class="news">NEWS</a>
                     <a href="#contact" class="contact">CONTACT</a>
                 </div>
@@ -45,7 +45,7 @@
             <div class="role">DIRECTOR</div>
             <div class="nav">
                 <a href="#about" class="about">ABOUT</a>
-                <a href="#work" class="work activeSection">TV &amp; FILM</a>
+                <a href="#reel_2024" class="work activeSection">TV &amp; FILM</a>
                 <a href="#news" class="news">NEWS</a>
                 <a href="#contact" class="contact">CONTACT</a>
                 <div class="mobile-divider"></div>
@@ -573,7 +573,8 @@
                 checkHash();
                 setTimeout(checkHash, 300); // stupid re-reload for ensuring you get to the desired video in URL hash
             } else if (window.location.hash === '') {
-                window.location.hash = '#work'; // defaults to about as "home"
+                // defaults to below as "home"
+                window.location.hash = '#reel_2024'; 
             } // what video did they arrive on?
 
         })(); // on DOM ready function
