@@ -1,6 +1,6 @@
 # heather-cappiello-website
 
-staging:
+~staging~ (OLD: now github pages uses custom URL of main):
 https://spencercap.github.io/heather-cappiello-website/.
 
 main:
