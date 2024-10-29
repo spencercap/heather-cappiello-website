@@ -462,6 +462,9 @@ body {
 #law_and_order_s21Img {
 	background-image: url('../assets/img/law_and_order_s21.jpeg');
 }
+#lincoln_lawyerImg {
+	background-image: url('../assets/img/lincoln_lawyer.jpg');
+}
 
 .videoTitle {
 	font-size: 1.8rem;
