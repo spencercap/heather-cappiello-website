@@ -413,6 +413,9 @@ body {
 #rubys_tuesdayImg {
 	background-image: url('../assets/img/rubys_tuesday.jpg'), url('../assets/img/play-icon.svg');
 }
+#starfleet_academyImg {
+	background-image: url('../assets/img/starfleet_academy.jpg'), url('../assets/img/play-icon.svg');
+}
 #freakishImg {
 	background-image: url('../assets/img/freakish.jpg'), url('../assets/img/play-icon.svg');
 }
